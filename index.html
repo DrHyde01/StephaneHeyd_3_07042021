@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/1d8f57007c.js"
+      crossorigin="anonymous"
+    ></script>
     <title>OhMyFood</title>
-</head>
-<body>
-    
-</body>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <img
+        class="logo_OMF"
+        src="images/logo/ohmyfood.png"
+        alt="logo_ohmyfood"
+      />
+      <div class="search">
+        <i class="fas fa-map-marker-alt"></i>
+        <!-- Formulaire ou bloc texte ? -->
+        <form method="post" action="#">
+        <input type="text" name="ville" placeholder="Paris, Belleville"/>
+      </div>
+    </header>
+
+    <!-- PRESENTATION-->
+    <section id="intro">
+      <h2>Réservez le menu qui vous convient</h2>
+      <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+
+      <div class="btn__gradient">
+        <a href="#">Explorez nos restaurants</a>
+      </div>
+    </section>
+
+    <!-- FONTCIONNEMENT-->
+    <section id="operations">
+      <h2>Fonctionnement</h2>
+
+      <section id="operations__container">
+        <div class="btn__operations">
+          <!-- Boutons cliquables ? -->
+          <p>1</p>
+          <i class="fas fa-mobile-alt"></i>
+          <p>Choissisez un restaurant</p>
+        </div>
+        <div class="btn__operations">
+          <p>2</p>
+          <i class="fas fa-list-ul"></i>
+          <p>Composez votre menu</p>
+        </div>
+        <div class="btn__operations">
+          <p>3</p>
+          <i class="fas fa-store"></i>
+          <p>Dégustez au restaurant</p>
+        </div>
+      </section>
+    </section>
+  </body>
 </html>
