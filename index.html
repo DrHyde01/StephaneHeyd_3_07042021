@@ -18,14 +18,17 @@
   </head>
 
   <body>
+    <!-- LOADER ... Animation CSS lors du chargement de la page, à tester -->
+    <div id="loader"></div>
+
     <!-- HEADER -->
     <header>
       <img
-        class="logo_OMF"
+        class="header__logo"
         src="images/logo/ohmyfood.png"
         alt="logo_ohmyfood"
       />
-      <div class="search">
+      <div class="header__search">
         <i class="fas fa-map-marker-alt"></i>
         <!-- Formulaire ou bloc texte ? -->
         <form method="post" action="#">
@@ -39,29 +42,29 @@
       <h1>Réservez le menu qui vous convient</h1>
       <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
 
-      <div class="btn__gradient">
-        <a href="#">Explorez nos restaurants</a>
-      </div>
+      <a class="btn__gradient btn__gradient--active" href="#"
+        >Explorez nos restaurants
+      </a>
     </section>
 
     <!-- FONTCIONNEMENT-->
     <section id="operations">
       <h1>Fonctionnement</h1>
 
-      <section id="operations__container">
-        <div class="btn__operations">
+      <section id="operations__content">
+        <div class="operations__btn operations__btn--active">
           <!-- Boutons cliquables ? -->
-          <p>1</p>
+          <p class="operations__number">1</p>
           <i class="fas fa-mobile-alt"></i>
           <p>Choissisez un restaurant</p>
         </div>
-        <div class="btn__operations">
-          <p>2</p>
+        <div class="operations__btn operations__btn--active">
+          <p class="operations__number">2</p>
           <i class="fas fa-list-ul"></i>
           <p>Composez votre menu</p>
         </div>
-        <div class="btn__operations">
-          <p>3</p>
+        <div class="operations__btn operations__btn--active">
+          <p class="operations__number">3</p>
           <i class="fas fa-store"></i>
           <p>Dégustez au restaurant</p>
         </div>
@@ -72,15 +75,15 @@
     <section id="restaurants">
       <h1>Restaurants</h1>
 
-      <section id="restaurants__container">
+      <section id="restaurants__content">
         <a href="html/palette_du_gout.html">
           <!-- ensemble cliquable avec lien vers menu -->
-          <figure class="restaurant__figure">
+          <figure class="restaurant__figure restaurant__figure--active">
             <img
               src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash_small.jpg"
               alt="palette du goût"
             />
-            <p class="new">Nouveau</p>
+            <p class="restaurant__new">Nouveau</p>
             <figcaption class="restaurant__figcaption">
               <h2>La palette du goût</h2>
               <p>Ménilmontant</p>
@@ -91,12 +94,12 @@
         </a>
 
         <a href="html/note_enchantee.html">
-          <figure class="restaurant__figure">
+          <figure class="restaurant__figure restaurant__figure--active">
             <img
               src="images/restaurants/stil-u2Lp8tXIcjw-unsplash_small.jpg"
               alt="note echantée"
             />
-            <p class="new">Nouveau</p>
+            <p class="restaurant__new">Nouveau</p>
             <figcaption class="restaurant__figcaption">
               <h2>La note enchantée</h2>
               <p>Charonne</p>
@@ -106,7 +109,7 @@
         </a>
 
         <a href="html/a_la_française.html">
-          <figure class="restaurant__figure">
+          <figure class="restaurant__figure restaurant__figure--active">
             <img
               src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash_small.jpg"
               alt="à la française"
@@ -120,7 +123,7 @@
         </a>
 
         <a href="html/le_delice_des_sens.html">
-          <figure class="restaurant__figure">
+          <figure class="restaurant__figure restaurant__figure--active">
             <img
               src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash_small.jpg"
               alt="le délice des sens"
@@ -139,15 +142,17 @@
     <footer>
       <h2 class="footer__title">ohmyfood</h2>
 
-      <ul>
-        <li class="li__icon">
+      <ul class="footer__list">
+        <li class="footer__item footer__item--bold">
           <a href="#"><i class="fas fa-utensils"></i>Proposez un restaurant</a>
         </li>
-        <li class="li__icon">
+        <li class="footer__item footer__item--bold">
           <a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
         </li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
+        <li class="footer__item"><a href="#">Mentions légales</a></li>
+        <li class="footer__item">
+          <a href="mailto:contact@ohmyfood.fr">Contact</a>
+        </li>
         <!-- lien factice -->
       </ul>
     </footer>
