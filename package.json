@@ -1,0 +1,19 @@
+{
+  "name": "projet-ohmyfood",
+  "version": "1.0.0",
+  "description": "P3 OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrHyde01/StephaneHeyd_3_07042021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DrHyde01/StephaneHeyd_3_07042021/issues"
+  },
+  "homepage": "https://github.com/DrHyde01/StephaneHeyd_3_07042021#readme"
+}
