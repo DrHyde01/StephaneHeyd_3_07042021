@@ -1,0 +1,13 @@
+.btn__gradient {
+  @include btn-gradient;
+  @include shadows;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 2s; /* Pour rendre le hover moins brutal */
+
+  &:hover {
+    @include lighter-hover;
+  }
+}

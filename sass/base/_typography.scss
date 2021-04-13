@@ -1,0 +1,69 @@
+body {
+  font-family: "roboto", sans-serif;
+  font-size: 1em;
+}
+
+a {
+  @include styles-disable;
+}
+
+.intro {
+  &__description {
+    font-size: 1.1em;
+    font-weight: lighter;
+  }
+}
+
+.operations__number {
+  font-weight: lighter;
+}
+
+.restaurant {
+  &__new {
+    font-weight: $semi-bold;
+  }
+
+  &__name {
+    font-size: 1.1em;
+  }
+
+  &__location {
+    font-weight: lighter;
+  }
+}
+
+.menu {
+  &__order {
+    font-size: 1em;
+    font-weight: lighter;
+  }
+
+  &__food {
+    font-size: 1em;
+  }
+
+  &__description {
+    font-size: 0.9em;
+    font-weight: lighter;
+  }
+
+  &__price {
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+}
+
+.footer {
+  &__title {
+    font-family: "shrikhand", sans-serif;
+    font-size: 1.2em;
+  }
+
+  &__list {
+    @include styles-disable;
+  }
+
+  &__item--bold {
+      font-weight: $semi-bold;
+  }
+}

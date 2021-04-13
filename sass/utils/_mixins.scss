@@ -1,0 +1,23 @@
+
+@mixin styles-disable {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+/* Pour les liens et les listes */ 
+
+@mixin btn-gradient {
+  font-weight: bold;
+  color: $white;
+  background-image: $gradient;
+  border-radius: 30px;
+}
+
+@mixin shadows {
+  box-shadow: 10px 5px 15px $soft-grey;
+}
+
+@mixin lighter-hover {
+  opacity: 0.8; /* Color functions indisponibles avec gradient */
+  box-shadow: 15px 5px 20px darken($soft-grey, 20%);
+}
