@@ -1,0 +1,21 @@
+.operations__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5em;
+  height: 1.5em;
+  color: $white;
+  background-color: $purple;
+  border-radius: 50px;
+}
+
+.head__search__ico {
+  opacity: 0.7;
+}
+
+.operations__ico {
+  color: darken($soft-grey, 50%);
+  font-size: 1.3em;
+  margin-left: $margin-sm;
+  margin-right: $margin-base;
+}

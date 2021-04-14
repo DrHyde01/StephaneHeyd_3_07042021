@@ -1,11 +1,11 @@
 .btn__gradient {
   @include btn-gradient;
   @include shadows;
-  width: 60%;
+  width: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 2s; /* For a smooth transition */
+  transition: 2s; /* make a smooth transition */
 
   &:hover {
     @include lighter-hover;

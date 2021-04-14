@@ -1,0 +1,49 @@
+#intro {
+  @include flex-center; /* Using a mixing for flex */
+  text-align: center;
+  padding: $padding-base;
+  padding-bottom: $padding-xl; /* More padding on bottom */
+  background-color: $soft-grey;
+  .intro__title {
+    padding-left: $padding-lg;
+    padding-right: $padding-lg;
+    margin-bottom: 0;
+  }
+  .intro__description {
+    margin-bottom: calc(17.6px * 2); /* Using calc to double margin on bottom */
+  }
+}
+
+#operations {
+  padding: $padding-base;
+  padding-top: $padding-xl;
+  padding-bottom: $padding-xl;
+  .operations__content {
+    @include flex-center;
+  }
+  .operations__btn {
+    width: calc(
+      100% - 10px
+    ); /* To repair the consequence of position : relative on this div and the next div */
+    height: 60px;
+    position: relative;
+    left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: $margin-base + 10px;
+    margin-bottom: $margin-base + 10px;
+    background-color: $soft-grey;
+    border-radius: 18px;
+    @include shadows;
+    transition: 2s; /* Smooth animation */
+
+    &:hover {
+      @include lighter-hover;
+    }
+  }
+  .operations__number {
+    position: relative; /* Moving operations__number to the left */
+    left: -10px;
+  }
+}

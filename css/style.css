@@ -4,7 +4,8 @@
 /* MEDIAS QUERIES */
 /* Disable styles for links or lists */
 /* Buttons style using gradient background */
-/* Shadow for main containers */
+/* Shadow for main containers and buttons */
+/* Flex stuff */
 /* Mixins for responsive */
 *, *:before, *:after {
   box-sizing: inherit;
@@ -29,10 +30,6 @@ a {
 
 .intro__description {
   font-size: 1.1em;
-  font-weight: lighter;
-}
-
-.operations__number {
   font-weight: lighter;
 }
 
@@ -80,19 +77,57 @@ a {
   color: #ffff;
   background-image: linear-gradient(#ff79da, #9356dc);
   border-radius: 30px;
-  box-shadow: 10px 5px 15px #f7f7f7;
-  width: 60%;
+  box-shadow: 2px 4px 15px #dedede;
+  width: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 2s;
-  /* For a smooth transition */
+  /* make a smooth transition */
 }
 .btn__gradient:hover {
   opacity: 0.8;
   /* Color functions like lighten not available on gradient */
-  box-shadow: 15px 5px 20px #c4c4c4;
+  box-shadow: 2px 4px 15px #787878;
   /* Make button shadow darker on hover */
+}
+
+.operations__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5em;
+  height: 1.5em;
+  color: #ffff;
+  background-color: #9356dc;
+  border-radius: 50px;
+}
+
+.head__search__ico {
+  opacity: 0.7;
+}
+
+.operations__ico {
+  color: #787878;
+  font-size: 1.3em;
+  margin-left: 5px;
+  margin-right: 15px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+input {
+  width: 80%;
+  background-color: #eaeaea;
+  border: none;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
 }
 
 .head {
@@ -111,7 +146,7 @@ a {
     /* Logo getting blurry on high resolutions, using SVG instead */
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1824px) {
   .head__logo {
     display: none;
   }
@@ -140,6 +175,68 @@ a {
   background-color: #eaeaea;
   /* Using a SASS function here, to make background darker */
   box-shadow: inset 0px 4px 10px -8px;
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Using a mixing for flex */
+  text-align: center;
+  padding: 15px;
+  padding-bottom: 50px;
+  /* More padding on bottom */
+  background-color: #f7f7f7;
+}
+#intro .intro__title {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 0;
+}
+#intro .intro__description {
+  margin-bottom: calc(17.6px * 2);
+  /* Using calc to double margin on bottom */
+}
+
+#operations {
+  padding: 15px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#operations .operations__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#operations .operations__btn {
+  width: calc( 100% - 10px );
+  /* To repair the consequence of position : relative on this div and the next div */
+  height: 60px;
+  position: relative;
+  left: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: #f7f7f7;
+  border-radius: 18px;
+  box-shadow: 2px 4px 15px #dedede;
+  transition: 2s;
+  /* Smooth animation */
+}
+#operations .operations__btn:hover {
+  opacity: 0.8;
+  /* Color functions like lighten not available on gradient */
+  box-shadow: 2px 4px 15px #787878;
+  /* Make button shadow darker on hover */
+}
+#operations .operations__number {
+  position: relative;
+  /* Moving operations__number to the left */
+  left: -10px;
 }
 
 /*# sourceMappingURL=style.css.map */

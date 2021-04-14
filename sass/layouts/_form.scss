@@ -1,0 +1,15 @@
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+input {
+  width: 80%;
+  background-color: darken($soft-grey, 5%);
+  border: none;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
+}

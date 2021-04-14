@@ -13,29 +13,40 @@
   border-radius: 30px;
 }
 
-/* Shadow for main containers */
+/* Shadow for main containers and buttons */
 @mixin shadows {
-  box-shadow: 10px 5px 15px $soft-grey;
+  box-shadow: 2px 4px 15px darken($soft-grey, 10%);
 }
 
 @mixin lighter-hover {
   opacity: 0.8; /* Color functions like lighten not available on gradient */
-  box-shadow: 15px 5px 20px darken($soft-grey, 20%); /* Make button shadow darker on hover */
+  box-shadow: 2px 4px 15px darken($soft-grey, 50%); /* Make button shadow darker on hover */
+}
+
+/* Flex stuff */
+
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Mixins for responsive */
 @mixin mobile-only {
-  @media screen and (max-width: map-get($breakpoints, mobile)){
-    @content}
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
   }
-
-@mixin tablet-only {
-    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablet)){
-      @content}
-  }
-
-@mixin desktop-only {
-  @media screen and (min-width: map-get($breakpoints, tablet)){
-    @content}
 }
 
+@mixin tablet-only {
+  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media screen and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, hd-screen)) {
+    @content;
+  }
+}
