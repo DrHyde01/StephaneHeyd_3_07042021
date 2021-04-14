@@ -1,8 +1,32 @@
+/* COLORS */
 $purple: #9356dc;
 $pink: #ff79da;
 $mint: #99e2d0;
-$soft-grey: #e2e2e2;
+$soft-grey: #f7f7f7;
 $white: #ffff;
 $gradient: linear-gradient($pink, $purple);
 
+/* FONTS */
 $semi-bold: 450;
+
+/* MARGINS & PADDINGS */
+$margin-none: 0px;
+$margin-sm:   5px;
+$margin-base: 15px;
+$margin-lg:   30px;
+$margin-xl:   50px;
+$margin-xxl:  100px;
+
+$padding-none: 0px;
+$padding-xxl:  100px;
+$padding-xl:   50px;
+$padding-lg:   30px;
+$padding-base: 15px;
+$padding-sm:   5px;
+
+/* MEDIAS QUERIES */
+$breakpoints: (
+    mobile : 749px, /* max */
+    tablet: 1024px, /* max */
+    hd-screen: 1824px, /* min */ 
+);

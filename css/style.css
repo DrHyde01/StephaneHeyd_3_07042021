@@ -1,10 +1,18 @@
-/* Pour les liens et les listes */
+/* COLORS */
+/* FONTS */
+/* MARGINS & PADDINGS */
+/* MEDIAS QUERIES */
+/* Disable styles for links or lists */
+/* Buttons style using gradient background */
+/* Shadow for main containers */
+/* Mixins for responsive */
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 body {
   box-sizing: border-box;
+  margin: 0;
 }
 
 /* Pour rendre la mise en page plus fluide */
@@ -72,18 +80,66 @@ a {
   color: #ffff;
   background-image: linear-gradient(#ff79da, #9356dc);
   border-radius: 30px;
-  box-shadow: 10px 5px 15px #e2e2e2;
+  box-shadow: 10px 5px 15px #f7f7f7;
   width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 2s;
-  /* Pour rendre le hover moins brutal */
+  /* For a smooth transition */
 }
 .btn__gradient:hover {
   opacity: 0.8;
-  /* Color functions indisponibles avec gradient */
-  box-shadow: 15px 5px 20px #afafaf;
+  /* Color functions like lighten not available on gradient */
+  box-shadow: 15px 5px 20px #c4c4c4;
+  /* Make button shadow darker on hover */
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.head__logo {
+  width: 50%;
+  padding: 15px;
+}
+@media screen and (min-width: 749px) and (max-width: 1024px) {
+  .head__logo {
+    display: none;
+    /* Logo getting blurry on high resolutions, using SVG instead */
+  }
+}
+@media screen and (min-width: 1024px) {
+  .head__logo {
+    display: none;
+  }
+}
+.head__logo--desktop {
+  width: 50%;
+  padding: 15px;
+}
+@media screen and (max-width: 749px) {
+  .head__logo--desktop {
+    display: none;
+    /* Using PNG on mobile version */
+  }
+}
+.head__back {
+  position: absolute;
+  /* Not the best way, but it work */
+  left: 15px;
+}
+.head__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 11px;
+  background-color: #eaeaea;
+  /* Using a SASS function here, to make background darker */
+  box-shadow: inset 0px 4px 10px -8px;
 }
 
 /*# sourceMappingURL=style.css.map */

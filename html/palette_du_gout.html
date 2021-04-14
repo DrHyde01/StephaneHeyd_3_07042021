@@ -19,18 +19,24 @@
 
   <body>
     <!-- HEADER -->
-    <header>
-      <a class="header__back" href="../index.html"
+    <header class="head">
+      <a class="head__back" href="../index.html"
         ><i class="fas fa-arrow-left arrow-left--active"></i
       ></a>
       <img
-        class="header__logo"
+        class="head__logo"
         src="../images/logo/ohmyfood.png"
         alt="logo_ohmyfood"
       />
+      <!-- SVG is easier to scale -->
+      <img
+        class="head__logo--desktop"
+        src="images/logo/ohmyfood@2x.svg"
+        alt="logo_ohmyfood_large"
+      />
     </header>
 
-    <!-- IMG MENU (méthode d'intégration à vérifier en css )-->
+    <!-- IMG MENU (Image bottom is under menu container )-->
     <div id="menu__img">
       <img
         src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash_small.jpg"
@@ -56,7 +62,7 @@
           <span class="menu__price">25€</span>
           <div class="menu__check">
             <i class="fas fa-check-circle check--hover check--roll"></i>
-            <!-- L'icône apparaît en se coulissant vers la gauche, au survol ou au clic sur le bouton, à vérifier en css -->
+            <!-- Icon appears on left sliding, hover or click ? -->
           </div>
         </div>
 
@@ -169,7 +175,7 @@
         <li class="footer__item">
           <a href="mailto:contact@ohmyfood.fr">Contact</a>
         </li>
-        <!-- lien factice -->
+        <!-- false mail adress ! -->
       </ul>
     </footer>
   </body>

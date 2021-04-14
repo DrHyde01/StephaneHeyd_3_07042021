@@ -1,11 +1,11 @@
-
+/* Disable styles for links or lists */
 @mixin styles-disable {
   text-decoration: none;
   list-style: none;
   color: inherit;
 }
-/* Pour les liens et les listes */ 
 
+/* Buttons style using gradient background */
 @mixin btn-gradient {
   font-weight: bold;
   color: $white;
@@ -13,11 +13,29 @@
   border-radius: 30px;
 }
 
+/* Shadow for main containers */
 @mixin shadows {
   box-shadow: 10px 5px 15px $soft-grey;
 }
 
 @mixin lighter-hover {
-  opacity: 0.8; /* Color functions indisponibles avec gradient */
-  box-shadow: 15px 5px 20px darken($soft-grey, 20%);
+  opacity: 0.8; /* Color functions like lighten not available on gradient */
+  box-shadow: 15px 5px 20px darken($soft-grey, 20%); /* Make button shadow darker on hover */
 }
+
+/* Mixins for responsive */
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)){
+    @content}
+  }
+
+@mixin tablet-only {
+    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablet)){
+      @content}
+  }
+
+@mixin desktop-only {
+  @media screen and (min-width: map-get($breakpoints, tablet)){
+    @content}
+}
+

@@ -1,0 +1,39 @@
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  &__logo {
+    width: 50%;
+    padding: $padding-base;
+    @include tablet-only {
+      display: none; /* Logo getting blurry on high resolutions, using SVG instead */
+    }
+    @include desktop-only {
+      display: none;
+    }
+  }
+  &__logo--desktop {
+    width: 50%;
+    padding: $padding-base;
+    @include mobile-only {
+      display: none; /* Using PNG on mobile version */
+    }
+  }
+  &__back {
+    position: absolute; /* Not the best way, but it work */
+    left: $padding-base;
+  }
+  &__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: $padding-base - 4px;
+    background-color: darken(
+      $soft-grey,
+      5%
+    ); /* Using a SASS function here, to make background darker */
+    box-shadow: inset 0px 4px 10px -8px;
+  }
+}

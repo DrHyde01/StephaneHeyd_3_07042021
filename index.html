@@ -18,19 +18,25 @@
   </head>
 
   <body>
-    <!-- LOADER ... Animation CSS lors du chargement de la page, à tester -->
+    <!-- LOADER ... CSS animation during a few seconds -->
     <div id="loader"></div>
 
     <!-- HEADER -->
-    <header>
+    <header class="head">
       <img
-        class="header__logo"
+        class="head__logo"
         src="images/logo/ohmyfood.png"
         alt="logo_ohmyfood"
       />
-      <div class="header__search">
+      <!-- SVG is easier to scale -->
+      <img
+        class="head__logo--desktop"
+        src="images/logo/ohmyfood@2x.svg"
+        alt="logo_ohmyfood_large"
+      />
+      <div class="head__search">
         <i class="fas fa-map-marker-alt"></i>
-        <!-- Formulaire ou bloc texte ? -->
+        <!-- Form or text block ? -->
         <form method="post" action="#">
           <input type="text" name="ville" placeholder="Paris, Belleville" />
         </form>
@@ -40,20 +46,22 @@
     <!-- PRESENTATION-->
     <section id="intro">
       <h1 class="intro__title">Réservez le menu qui vous convient</h1>
-      <p class="intro__description">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+      <p class="intro__description">
+        Découvrez des restaurants d'exception, sélectionnés par nos soins.
+      </p>
 
       <a class="btn__gradient btn__gradient--active" href="#">
         <p class="btn__text">Explorez nos restaurants</p>
       </a>
     </section>
 
-    <!-- FONTCIONNEMENT-->
+    <!-- OPERATIONS-->
     <section id="operations">
       <h1>Fonctionnement</h1>
 
       <section id="operations__content">
         <div class="operations__btn operations__btn--active">
-          <!-- Boutons cliquables ? -->
+          <!-- clickable content ? -->
           <p class="operations__number">1</p>
           <i class="fas fa-mobile-alt"></i>
           <p>Choissisez un restaurant</p>
@@ -77,7 +85,7 @@
 
       <section id="restaurants__content">
         <a href="html/palette_du_gout.html">
-          <!-- ensemble cliquable avec lien vers menu -->
+          <!-- clickable content with link to menu pages -->
           <figure class="restaurant__figure restaurant__figure--active">
             <img
               class="restaurant__img"
@@ -85,14 +93,14 @@
               alt="palette du goût"
             />
             <p class="restaurant__new">Nouveau</p>
-            <!-- Class pour customiser le texte en vert -->
+            <!-- Custom class to create green layout  -->
             <figcaption class="restaurant__figcaption">
               <h2 class="restaurant__name">La palette du goût</h2>
               <p class="restaurant__location">Ménilmontant</p>
               <div class="restaurant__favorite">
-                <!-- Réutilisable sur les pages menu -->
+                <!-- Reusable on menu pages -->
                 <i class="far fa-heart heart--color"></i>
-                <!-- effet de remplissage couleur lors de :hover -->
+                <!-- Color filling effect on hover -->
               </div>
             </figcaption>
           </figure>
@@ -167,7 +175,7 @@
         <li class="footer__item">
           <a href="mailto:contact@ohmyfood.fr">Contact</a>
         </li>
-        <!-- lien factice -->
+        <!-- false mail adress ! -->
       </ul>
     </footer>
   </body>
