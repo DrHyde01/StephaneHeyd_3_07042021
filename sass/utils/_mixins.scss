@@ -32,6 +32,28 @@
   align-items: center;
 }
 
+/* Margins & paddings */
+@mixin custom_top_margin {
+  margin-top: $margin-base + 10px;
+  margin-bottom: $margin-base + 10px;
+}
+
+@mixin custom_section_padding {
+  padding: $padding-base;
+  padding-top: $padding-xl;
+  padding-bottom: $padding-xl;
+}
+
+/* Others stuff */
+
+@mixin new-restaurant {
+  color: darken($mint, 40%);
+  background-color: $mint;
+  text-align: center;
+  width: 80px;
+  padding: $padding-sm;
+}
+
 /* Mixins for responsive */
 @mixin mobile-only {
   @media screen and (max-width: map-get($breakpoints, mobile)) {

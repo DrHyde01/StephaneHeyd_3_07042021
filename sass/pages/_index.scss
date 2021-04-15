@@ -15,9 +15,7 @@
 }
 
 #operations {
-  padding: $padding-base;
-  padding-top: $padding-xl;
-  padding-bottom: $padding-xl;
+  @include custom_section_padding;
   .operations__content {
     @include flex-center;
   }
@@ -31,8 +29,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-top: $margin-base + 10px;
-    margin-bottom: $margin-base + 10px;
+    @include custom_top_margin;
     background-color: $soft-grey;
     border-radius: 18px;
     @include shadows;
@@ -54,11 +51,10 @@
 }
 
 #restaurants {
-  padding: $padding-base;
-  padding-top: $padding-xl;
-  padding-bottom: $padding-xl;
+  @include custom_section_padding;
   background-color: $soft-grey;
   .restaurants__content {
     @include flex-center;
+    margin: 0;
   }
 }

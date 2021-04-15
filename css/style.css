@@ -6,6 +6,8 @@
 /* Buttons style using gradient background */
 /* Shadow for main containers and buttons */
 /* Flex stuff */
+/* Margins & paddings */
+/* Others stuff */
 /* Mixins for responsive */
 *, *:before, *:after {
   box-sizing: inherit;
@@ -34,6 +36,7 @@ a {
 }
 
 .restaurant__new {
+  font-size: 0.8em;
   font-weight: 450;
 }
 .restaurant__name {
@@ -112,6 +115,97 @@ a {
   font-size: 1.3em;
   margin-left: 5px;
   margin-right: 15px;
+}
+
+.favorite__ico {
+  font-size: 1.5em;
+}
+
+.footer__ico {
+  font-size: 1em;
+  padding-right: 5px;
+}
+
+/* Figures & figcaptions */
+.restaurant__figure {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  /* Same parameters than operations__btn */
+  position: relative;
+  width: 100%;
+  height: 230px;
+  box-shadow: 2px 4px 15px #dedede;
+  border-radius: 18px;
+  transition: 2s;
+}
+.restaurant__figure .restaurant__img {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+  border-radius: 18px 18px 0px 0px;
+}
+.restaurant__figure .restaurant__new {
+  color: #278870;
+  background-color: #99e2d0;
+  text-align: center;
+  width: 80px;
+  padding: 5px;
+  position: absolute;
+  /* To move text over parent */
+  top: 4%;
+  right: 4%;
+  margin: 0px;
+}
+.restaurant__figure:hover {
+  opacity: 0.8;
+  /* Color functions like lighten not available on gradient */
+  box-shadow: 2px 4px 15px #787878;
+  /* Make button shadow darker on hover */
+}
+.restaurant__figure .restaurant__figcaption {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 35%;
+  padding: 15px;
+}
+.restaurant__figure .restaurant__figcaption .restaurant__name {
+  width: 80%;
+  margin: 0;
+}
+.restaurant__figure .restaurant__figcaption .restaurant__location {
+  width: 80%;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.restaurant__figure .restaurant__figcaption .restaurant__favorite {
+  display: flex;
+  /* To center icon */
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.restaurant__figure .restaurant__figcaption .favorite__ico--color {
+  display: none;
+}
+
+.footer {
+  background-color: #454545;
+  padding: 15px;
+  color: #f7f7f7;
+}
+.footer__title {
+  margin: 0px;
+}
+.footer__list {
+  padding-left: 0px;
+}
+.footer__item {
+  margin-top: 5px;
 }
 
 form {
@@ -255,6 +349,7 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,2 +1,59 @@
+/* Figures & figcaptions */
+.restaurant__figure {
+  display: flex;
+  flex-direction: column;
+  margin-left: $margin-none;
+  margin-right: $margin-none;
+  @include custom_top_margin; /* Same parameters than operations__btn */
+  position: relative;
+  width: 100%;
+  height: 230px;
+  @include shadows;
+  border-radius: 18px;
+  transition: 2s;
+  .restaurant__img {
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+    border-radius: 18px 18px 0px 0px;
+  }
+  .restaurant__new {
+    @include new-restaurant;
+    position: absolute; /* To move text over parent */
+    top: 4%;
+    right: 4%;
+    margin: $margin-none;
+  }
+  &:hover {
+    @include lighter-hover;
+  }
 
+  .restaurant__figcaption {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 35%;
+    padding: $padding-base;
 
+    .restaurant__name {
+      width: 80%;
+      margin: 0;
+    }
+
+    .restaurant__location {
+      width: 80%;
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+
+    .restaurant__favorite {
+      display: flex; /* To center icon */
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    .favorite__ico--color {
+      display: none;
+    }
+  }
+}

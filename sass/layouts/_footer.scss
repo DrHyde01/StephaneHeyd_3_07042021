@@ -1,0 +1,14 @@
+.footer {
+    background-color: darken($soft-grey, 70%);
+    padding: $padding-base;
+    color: $soft-grey;
+    &__title {
+        margin: $margin-none;
+    }
+    &__list {
+        padding-left: $padding-none;
+    }
+    &__item {
+        margin-top: $margin-sm;
+    }
+}

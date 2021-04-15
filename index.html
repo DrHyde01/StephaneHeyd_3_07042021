@@ -106,8 +106,9 @@
               <p class="restaurant__location">Ménilmontant</p>
               <div class="restaurant__favorite">
                 <!-- Reusable on menu pages -->
-                <i class="far fa-heart heart--color"></i>
-                <!-- Color filling effect on hover -->
+                <i class="far fa-heart favorite__ico"></i>
+                <i class="fas fa-heart favorite__ico--color"></i>
+                <!-- Color filling effect on hover, displaying when hover only !  -->
               </div>
             </figcaption>
           </figure>
@@ -125,7 +126,8 @@
               <h2 class="restaurant__name">La note enchantée</h2>
               <p class="restaurant__location">Charonne</p>
               <div class="restaurant__favorite">
-                <i class="far fa-heart heart--color"></i>
+                <i class="far fa-heart favorite__ico"></i>
+                <i class="fas fa-heart favorite__ico--color"></i>
               </div>
             </figcaption>
           </figure>
@@ -142,7 +144,8 @@
               <h2 class="restaurant__name">À la française</h2>
               <p class="restaurant__location">Cité Rouge</p>
               <div class="restaurant__favorite">
-                <i class="far fa-heart heart--color"></i>
+                <i class="far fa-heart favorite__ico"></i>
+                <i class="fas fa-heart favorite__ico--color"></i>
               </div>
             </figcaption>
           </figure>
@@ -159,7 +162,8 @@
               <h2 class="restaurant__name">Le délice des sens</h2>
               <p class="restaurant__location">Folie-Méricourt</p>
               <div class="restaurant__favorite">
-                <i class="far fa-heart heart--color"></i>
+                <i class="far fa-heart favorite__ico"></i>
+                <i class="fas fa-heart favorite__ico--color"></i>
               </div>
             </figcaption>
           </figure>
@@ -168,15 +172,17 @@
     </section>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="footer"> 
+      <!-- Create footer class for BEM-->
       <h2 class="footer__title">ohmyfood</h2>
 
       <ul class="footer__list">
         <li class="footer__item footer__item--bold">
-          <a href="#"><i class="fas fa-utensils"></i>Proposez un restaurant</a>
+          <a href="#"><i class="fas fa-utensils footer__ico fa-fw"></i>Proposez un restaurant</a>
         </li>
+        <!-- fa-fw to fixed width icons-->
         <li class="footer__item footer__item--bold">
-          <a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
+          <a href="#"><i class="fas fa-hands-helping footer__ico fa-fw"></i>Devenir partenaire</a>
         </li>
         <li class="footer__item"><a href="#">Mentions légales</a></li>
         <li class="footer__item">
