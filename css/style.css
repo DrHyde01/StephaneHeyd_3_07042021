@@ -232,11 +232,29 @@ input {
   /* Color functions like lighten not available on gradient */
   box-shadow: 2px 4px 15px #787878;
   /* Make button shadow darker on hover */
+  background-color: #e4d5f6;
+}
+#operations .operations__btn:hover .operations__ico {
+  color: #9356dc;
+  /* Icon color change while hover on parent */
 }
 #operations .operations__number {
   position: relative;
   /* Moving operations__number to the left */
   left: -10px;
+}
+
+#restaurants {
+  padding: 15px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f7f7f7;
+}
+#restaurants .restaurants__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

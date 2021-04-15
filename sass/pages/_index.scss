@@ -40,10 +40,25 @@
 
     &:hover {
       @include lighter-hover;
+      background-color: lighten($purple, 30%);
+    }
+
+    &:hover .operations__ico {
+      color: $purple; /* Icon color change while hover on parent */
     }
   }
   .operations__number {
     position: relative; /* Moving operations__number to the left */
     left: -10px;
+  }
+}
+
+#restaurants {
+  padding: $padding-base;
+  padding-top: $padding-xl;
+  padding-bottom: $padding-xl;
+  background-color: $soft-grey;
+  .restaurants__content {
+    @include flex-center;
   }
 }
