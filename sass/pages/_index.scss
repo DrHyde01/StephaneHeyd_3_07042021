@@ -1,25 +1,25 @@
-#intro {
+.intro {
   @include flex-center; /* Using a mixing for flex */
   text-align: center;
   padding: $padding-base;
   padding-bottom: $padding-xl; /* More padding on bottom */
   background-color: $soft-grey;
-  .intro__title {
+  &__title {
     padding-left: $padding-lg;
     padding-right: $padding-lg;
     margin-bottom: 0;
   }
-  .intro__description {
+  &__description {
     margin-bottom: calc(17.6px * 2); /* Using calc to double margin on bottom */
   }
 }
 
-#operations {
+.operations {
   @include custom_section_padding;
-  .operations__content {
+  &__content {
     @include flex-center;
   }
-  .operations__btn {
+  &__btn {
     width: calc(
       100% - 10px
     ); /* To repair the consequence of position : relative on this div and the next div */
@@ -44,16 +44,16 @@
       color: $purple; /* Icon color change while hover on parent */
     }
   }
-  .operations__number {
+  &__number {
     position: relative; /* Moving operations__number to the left */
     left: -10px;
   }
 }
 
-#restaurants {
+.restaurant {
   @include custom_section_padding;
   background-color: $soft-grey;
-  .restaurants__content {
+  content {
     @include flex-center;
     margin: 0;
   }

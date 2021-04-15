@@ -271,7 +271,7 @@ input {
   box-shadow: inset 0px 4px 10px -8px;
 }
 
-#intro {
+.intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -283,28 +283,28 @@ input {
   /* More padding on bottom */
   background-color: #f7f7f7;
 }
-#intro .intro__title {
+.intro__title {
   padding-left: 30px;
   padding-right: 30px;
   margin-bottom: 0;
 }
-#intro .intro__description {
+.intro__description {
   margin-bottom: calc(17.6px * 2);
   /* Using calc to double margin on bottom */
 }
 
-#operations {
+.operations {
   padding: 15px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
-#operations .operations__content {
+.operations__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#operations .operations__btn {
+.operations__btn {
   width: calc( 100% - 10px );
   /* To repair the consequence of position : relative on this div and the next div */
   height: 60px;
@@ -321,30 +321,30 @@ input {
   transition: 2s;
   /* Smooth animation */
 }
-#operations .operations__btn:hover {
+.operations__btn:hover {
   opacity: 0.8;
   /* Color functions like lighten not available on gradient */
   box-shadow: 2px 4px 15px #787878;
   /* Make button shadow darker on hover */
   background-color: #e4d5f6;
 }
-#operations .operations__btn:hover .operations__ico {
+.operations__btn:hover .operations__ico {
   color: #9356dc;
   /* Icon color change while hover on parent */
 }
-#operations .operations__number {
+.operations__number {
   position: relative;
   /* Moving operations__number to the left */
   left: -10px;
 }
 
-#restaurants {
+.restaurant {
   padding: 15px;
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #f7f7f7;
 }
-#restaurants .restaurants__content {
+.restaurant content {
   display: flex;
   flex-direction: column;
   justify-content: center;
