@@ -30,7 +30,10 @@ a {
 }
 
 .menu {
-  &__order {
+  &__title {
+    font-family: "shrikhand", sans-serif;
+  }
+  &__ordertitle {
     font-size: 1em;
     font-weight: lighter;
   }
