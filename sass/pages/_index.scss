@@ -33,7 +33,7 @@
     background-color: $soft-grey;
     border-radius: 18px;
     @include shadows;
-    transition: 2s; /* Smooth animation */
+    transition: 500ms; /* Smooth animation */
 
     &:hover {
       @include lighter-hover;

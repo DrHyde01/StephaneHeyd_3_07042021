@@ -45,15 +45,19 @@
       margin-top: 5px;
       margin-bottom: 0;
     }
-
-    .restaurant__favorite {
-      display: flex; /* To center icon */
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-    }
-    .favorite__ico--color {
-      display: none;
-    }
   }
+}
+
+/* HEART ICON */
+
+.restaurant__favorite {
+  display: flex; /* To center icon */
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+}
+
+.favorite__ico--color {
+  display: none;
 }
