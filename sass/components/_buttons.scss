@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 2s; /* make a smooth transition */
+  transition: 500ms; /* make a smooth transition */
 
   &:hover {
     @include lighter-hover;

@@ -22,6 +22,14 @@
 
 .favorite__ico {
   font-size: 1.5em;
+  &--color {
+    font-size: 1.5em;
+  }
+}
+
+.check__ico {
+  font-size: 1.5em;
+  color: $white;
 }
 
 .footer__ico {

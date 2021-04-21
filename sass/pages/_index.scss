@@ -1,12 +1,10 @@
 .intro {
   @include flex-center; /* Using a mixing for flex */
   text-align: center;
-  padding: $padding-base;
-  padding-bottom: $padding-xl; /* More padding on bottom */
+  padding: $padding-base $padding-base $padding-xl $padding-base;
   background-color: $soft-grey;
   &__title {
-    padding-left: $padding-lg;
-    padding-right: $padding-lg;
+    padding: 0 $padding-lg 0 $padding-lg;
     margin-bottom: 0;
   }
   &__description {
