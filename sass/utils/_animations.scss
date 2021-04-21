@@ -1,0 +1,23 @@
+/* KEYFRAMES */
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rotate_slow {
+  0% {
+    transform: rotate(1turn);
+  }
+  50% {
+    transform: rotate(-1turn);
+  }
+}
+@keyframes rotate_speed {
+  0% {
+    transform: rotate(-1turn); /* Asymmetric effect */
+  }
+  50% {
+    transform: rotate(1turn);
+  }
+}

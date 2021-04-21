@@ -1,3 +1,53 @@
+.loader {
+  position: fixed; /*fixed on the whole page */
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000be;
+  z-index: 9999;
+  animation: loader 4000ms cubic-bezier(.6,.01,1,.47);
+  animation-fill-mode: both;
+  &__assiette {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border: 4px solid $mint;
+    border-radius: 50%;
+    animation: rotate_slow 4000ms cubic-bezier(.6,.01,.4,1);
+    animation-iteration-count: 1;
+    &--dot {
+      height: 20px;
+      width: 20px;
+      background-color: $mint;
+      border-radius: 50%;
+      position: absolute;
+      top: 40px;
+    }
+  }
+  &__assiette2 {
+    position: absolute;
+    height: 130px;
+    width: 130px;
+    border: 2px solid $purple;
+    border-radius: 50%;
+    animation : rotate_speed 4000ms cubic-bezier(.6,.01,.4,1);
+    animation-iteration-count: 1;
+    &--dot {
+      height: 20px;
+      width: 20px;
+      background-color: $purple;
+      border-radius: 50%;
+      position: absolute;
+      top: 80px;
+      left: 110px;
+  }
+  }
+}
+
 .intro {
   @include flex-center; /* Using a mixing for flex */
   text-align: center;

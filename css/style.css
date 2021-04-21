@@ -9,6 +9,29 @@
 /* Margins & paddings */
 /* Others stuff */
 /* Mixins for responsive */
+/* KEYFRAMES */
+@keyframes loader {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rotate_slow {
+  0% {
+    transform: rotate(1turn);
+  }
+  50% {
+    transform: rotate(-1turn);
+  }
+}
+@keyframes rotate_speed {
+  0% {
+    transform: rotate(-1turn);
+    /* Asymmetric effect */
+  }
+  50% {
+    transform: rotate(1turn);
+  }
+}
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -286,6 +309,57 @@ input {
   background-color: #eaeaea;
   /* Using a SASS function here, to make background darker */
   box-shadow: inset 0px 4px 10px -8px;
+}
+
+.loader {
+  position: fixed;
+  /*fixed on the whole page */
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000be;
+  z-index: 9999;
+  animation: loader 4000ms cubic-bezier(0.6, 0.01, 1, 0.47);
+  animation-fill-mode: both;
+}
+.loader__assiette {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border: 4px solid #99e2d0;
+  border-radius: 50%;
+  animation: rotate_slow 4000ms cubic-bezier(0.6, 0.01, 0.4, 1);
+  animation-iteration-count: 1;
+}
+.loader__assiette--dot {
+  height: 20px;
+  width: 20px;
+  background-color: #99e2d0;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+}
+.loader__assiette2 {
+  position: absolute;
+  height: 130px;
+  width: 130px;
+  border: 2px solid #9356dc;
+  border-radius: 50%;
+  animation: rotate_speed 4000ms cubic-bezier(0.6, 0.01, 0.4, 1);
+  animation-iteration-count: 1;
+}
+.loader__assiette2--dot {
+  height: 20px;
+  width: 20px;
+  background-color: #9356dc;
+  border-radius: 50%;
+  position: absolute;
+  top: 80px;
+  left: 110px;
 }
 
 .intro {
