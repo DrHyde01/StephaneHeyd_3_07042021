@@ -3,6 +3,7 @@
 @keyframes loader {
   100% {
     opacity: 0;
+    visibility: hidden; /* Hide the loader when the page is charged */
   }
 }
 @keyframes rotate_slow {
