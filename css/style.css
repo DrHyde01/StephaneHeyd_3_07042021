@@ -236,11 +236,26 @@ a {
   width: 20%;
 }
 
+.favorite__ico {
+  position: absolute;
+  background-color: #ffff;
+  transition: opacity 600ms ease-in-out;
+}
+.favorite__ico--grey {
+  background-color: #f7f7f7;
+  /* A little adjustemnt for the menu page background color */
+}
+.favorite__ico:hover {
+  opacity: 0;
+  /* Favorite__ico dissapear on hover, favorite__ico--color appears instead */
+  cursor: pointer;
+}
+
 .favorite__ico--color {
   background: linear-gradient(#ff79da, #9356dc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 1;
+  /* Need border like previous state, try to use stroke property ? */
 }
 
 .footer {

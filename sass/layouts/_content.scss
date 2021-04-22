@@ -58,9 +58,22 @@
   width: 20%;
 }
 
+.favorite__ico{
+  position: absolute;
+  background-color: $white; 
+  transition: opacity 600ms ease-in-out;
+  &--grey {
+    background-color : $soft-grey; /* A little adjustemnt for the menu page background color */
+  }
+  &:hover {
+    opacity: 0; /* Favorite__ico dissapear on hover, favorite__ico--color appears instead */
+    cursor: pointer;
+  }
+}
 .favorite__ico--color {
   background: $gradient;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 1;
+  /* Need border like previous state, try to use stroke property ? */
 }
+
