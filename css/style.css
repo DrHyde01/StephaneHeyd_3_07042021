@@ -60,9 +60,14 @@ a {
   font-weight: lighter;
 }
 
+.btn__text {
+  font-size: 1em;
+  font-weight: bold;
+}
+
 .restaurant__new {
   font-size: 0.8em;
-  font-weight: 450;
+  font-weight: 500;
 }
 .restaurant__name {
   font-size: 1.1em;
@@ -105,11 +110,10 @@ a {
   color: inherit;
 }
 .footer__item--bold {
-  font-weight: 450;
+  font-weight: 500;
 }
 
 .btn__gradient {
-  font-weight: bold;
   color: #ffff;
   background-image: linear-gradient(#ff79da, #9356dc);
   border-radius: 30px;
@@ -118,7 +122,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 500ms;
+  transition: 600ms ease-in-out;
   /* make a smooth transition */
 }
 .btn__gradient:hover {
@@ -209,6 +213,8 @@ a {
   flex-wrap: wrap;
   height: 35%;
   padding: 15px;
+  background-color: #ffff;
+  border-radius: 0px 0px 18px 18px;
 }
 .restaurant__figure .restaurant__figcaption .restaurant__name {
   width: 80%;
@@ -220,7 +226,7 @@ a {
   margin-bottom: 0;
 }
 
-/* HEART ICON */
+/* FAVORITE ICON */
 .restaurant__favorite {
   display: flex;
   /* To center icon */
@@ -231,7 +237,10 @@ a {
 }
 
 .favorite__ico--color {
-  display: none;
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
 }
 
 .footer {
@@ -271,6 +280,14 @@ input {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+@media screen and (min-width: 1024px) and (max-width: 1824px) {
+  .head {
+    height: 150px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 50px;
+  }
 }
 .head__logo {
   width: 50%;
@@ -312,6 +329,11 @@ input {
   /* Using a SASS function here, to make background darker */
   box-shadow: inset 0px 4px 10px -8px;
 }
+@media screen and (min-width: 1024px) and (max-width: 1824px) {
+  .head__search {
+    width: 30%;
+  }
+}
 
 .loader {
   position: fixed;
@@ -324,7 +346,7 @@ input {
   justify-content: center;
   align-items: center;
   background-color: #000000be;
-  z-index: 10000;
+  z-index: 9999;
   animation: loader 4000ms cubic-bezier(0.6, 0.01, 1, 0.47);
   animation-fill-mode: both;
 }

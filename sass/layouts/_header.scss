@@ -3,6 +3,12 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  @include desktop-only {
+    height: 150px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: $padding-xl; 
+  }
   &__logo {
     width: 50%;
     padding: $padding-base;
@@ -35,5 +41,8 @@
       5%
     ); /* Using a SASS function here, to make background darker */
     box-shadow: inset 0px 4px 10px -8px;
+    @include desktop-only {
+      width: 30%;
+    }
   }
 }

@@ -7,7 +7,6 @@
 
 /* Buttons style using gradient background */
 @mixin btn-gradient {
-  font-weight: bold;
   color: $white;
   background-image: $gradient;
   border-radius: 30px;

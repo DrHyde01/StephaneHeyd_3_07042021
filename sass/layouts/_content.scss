@@ -32,6 +32,8 @@
     flex-wrap: wrap;
     height: 35%;
     padding: $padding-base;
+    background-color: $white;
+    border-radius: 0px 0px 18px 18px;
 
     .restaurant__name {
       width: 80%;
@@ -46,7 +48,7 @@
   }
 }
 
-/* HEART ICON */
+/* FAVORITE ICON */
 
 .restaurant__favorite {
   display: flex; /* To center icon */
@@ -57,5 +59,8 @@
 }
 
 .favorite__ico--color {
-  display: none;
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
 }
