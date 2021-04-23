@@ -54,19 +54,36 @@
     padding-left: $padding-sm;
     background-color: $white;
     border-radius: 18px;
+    overflow: hidden; /* To hide outside elements, like check item */
     @include shadows;
     transition: 500ms;
     &:hover {
       @include lighter-hover;
       cursor: pointer;
+      .menu__check {
+        transform: translatex(-5em);
+        visibility: visible;
+      }
+      .check__ico {
+        animation-name: check_in;
+        animation-duration: 1500ms;
+      }
     }
   }
+
   &__text {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 80%;
     padding: $padding-sm;
+  }
+  &__food {
+    /* Create ellipsis on the 1st text */
+    display: block; /* Not working with flex ! */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &__description {
     /* Create ellipsis on the 2nd text */
@@ -87,13 +104,22 @@
     /* Work in progress ... */
     height: 100%;
     background-color: $mint;
+    border-radius: 0 18px 18px 0;
     flex: 1;
     margin-right: -5em;
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    visibility: hidden;
+    transform: translatex(5em);
+    transition-duration: 1500ms;
   }
+  .check__ico {
+    /* Work in progress ... */
+    animation-name: check_out;
+    animation-duration: 1500ms;
+  }
+
   .eatorder {
     display: flex;
     justify-content: center;

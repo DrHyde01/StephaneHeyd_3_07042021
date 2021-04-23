@@ -10,6 +10,7 @@
 /* Others stuff */
 /* Mixins for responsive */
 /* KEYFRAMES */
+/* LOADER */
 @keyframes loader {
   100% {
     opacity: 0;
@@ -32,6 +33,25 @@
   }
   50% {
     transform: rotate(1turn);
+  }
+}
+/*CHECK ICON*/
+@keyframes check_in {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    transition: ease-in-out;
+  }
+}
+@keyframes check_out {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    transition: ease-in-out;
   }
 }
 *, *:before, *:after {
@@ -298,7 +318,7 @@ input {
 }
 @media screen and (min-width: 1024px) and (max-width: 1824px) {
   .head {
-    height: 150px;
+    height: 100px;
     justify-content: space-between;
     flex-wrap: nowrap;
     padding: 50px;
@@ -320,7 +340,7 @@ input {
   }
 }
 .head__logo--desktop {
-  width: 50%;
+  height: 80px;
   padding: 15px;
 }
 @media screen and (max-width: 749px) {
@@ -347,6 +367,8 @@ input {
 @media screen and (min-width: 1024px) and (max-width: 1824px) {
   .head__search {
     width: 30%;
+    border-radius: 30px;
+    background-color: #f7f7f7;
   }
 }
 
@@ -541,6 +563,8 @@ input {
   padding-left: 5px;
   background-color: #ffff;
   border-radius: 18px;
+  overflow: hidden;
+  /* To hide outside elements, like check item */
   box-shadow: 2px 4px 15px #dedede;
   transition: 500ms;
 }
@@ -551,12 +575,28 @@ input {
   /* Make button shadow darker on hover */
   cursor: pointer;
 }
+.menu__btn:hover .menu__check {
+  transform: translatex(-5em);
+  visibility: visible;
+}
+.menu__btn:hover .check__ico {
+  animation-name: check_in;
+  animation-duration: 1500ms;
+}
 .menu__text {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 80%;
   padding: 5px;
+}
+.menu__food {
+  /* Create ellipsis on the 1st text */
+  display: block;
+  /* Not working with flex ! */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__description {
   /* Create ellipsis on the 2nd text */
@@ -579,12 +619,20 @@ input {
   /* Work in progress ... */
   height: 100%;
   background-color: #99e2d0;
+  border-radius: 0 18px 18px 0;
   flex: 1;
   margin-right: -5em;
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
+  visibility: hidden;
+  transform: translatex(5em);
+  transition-duration: 1500ms;
+}
+.menu .check__ico {
+  /* Work in progress ... */
+  animation-name: check_out;
+  animation-duration: 1500ms;
 }
 .menu .eatorder {
   display: flex;

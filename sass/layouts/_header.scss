@@ -4,7 +4,7 @@
   align-items: center;
   flex-wrap: wrap;
   @include desktop-only {
-    height: 150px;
+    height: 100px;
     justify-content: space-between;
     flex-wrap: nowrap;
     padding: $padding-xl; 
@@ -20,7 +20,8 @@
     }
   }
   &__logo--desktop {
-    width: 50%;
+    
+    height: 80px;
     padding: $padding-base;
     @include mobile-only {
       display: none; /* Using PNG on mobile version */
@@ -43,6 +44,8 @@
     box-shadow: inset 0px 4px 10px -8px;
     @include desktop-only {
       width: 30%;
+      border-radius: 30px;
+      background-color: $soft-grey;
     }
   }
 }
