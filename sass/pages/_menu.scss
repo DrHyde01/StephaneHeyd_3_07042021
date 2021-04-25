@@ -49,7 +49,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
     margin-top: $margin-base;
     padding-left: $padding-sm;
     background-color: $white;
@@ -61,7 +60,7 @@
       @include lighter-hover;
       cursor: pointer;
       .menu__check {
-        transform: translatex(-5em);
+        margin-right: 0em; /* It works but need explication */
         visibility: visible;
       }
       .check__ico {
@@ -75,8 +74,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 80%;
+    flex: 1;
     padding: $padding-sm;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   &__food {
     /* Create ellipsis on the 1st text */
@@ -97,21 +99,19 @@
     align-items: flex-end;
     justify-content: center;
     height: 90%;
-    flex: 1; /* More flexible than % in this case */
     padding-bottom: 10px;
   }
   &__check {
     /* Work in progress ... */
     height: 100%;
     background-color: $mint;
-    border-radius: 0 18px 18px 0;
-    flex: 1;
-    margin-right: -5em;
+    width: 4em;
+    margin-right: -4em;
+    margin-left: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
     visibility: hidden;
-    transform: translatex(5em);
     transition-duration: 1500ms;
   }
   .check__ico {
