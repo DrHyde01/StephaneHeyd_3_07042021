@@ -134,20 +134,24 @@
 .restaurant {
   @include custom_section_padding;
   background-color: $soft-grey;
+  @include desktop-only {
+    padding-bottom: $padding-xl;
+  }
+  @include hd-screen-only {
+    padding-bottom: $padding-xl;
+  }
   &__content {
     @include desktop-only {
       display: grid;
       grid-template-columns: auto auto;
-      grid-template-rows: 40% 40%;
-      column-gap: 30px;
-      row-gap: 30px;
+      grid-template-rows: auto auto;
+      grid-gap: 40px;
     }
     @include hd-screen-only {
       display: grid;
       grid-template-columns: auto auto;
-      grid-template-rows: 40% 40%;
-      column-gap: 50px;
-      row-gap: 50px;
+      grid-template-rows: auto auto;
+      grid-gap: 40px;
     }
   }
   @include desktop-only {
