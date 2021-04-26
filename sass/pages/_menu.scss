@@ -29,6 +29,17 @@
   }
   &__order {
     margin-bottom: $margin-base;
+    /* Work in progress ... */
+    transform: scale(0);
+    animation-name: menu_list;
+    animation-duration: $anim-dur;
+    animation-timing-function: cubic-bezier(.38,.1,.67,.99);
+    animation-fill-mode: both; /* Scale 1 at animation end */ 
+    @for $i from 1 through 3 { /* SASS loop here, to menus appears in order */
+      &--#{$i} {
+        animation-delay: #{$i/3}s; /* Divide animation delay */ 
+      }
+    }
   }
   &__ordertitle {
     position: relative; /* IMPORTANT ! */
@@ -60,7 +71,7 @@
       @include lighter-hover;
       cursor: pointer;
       .menu__check {
-        margin-right: 0em; /* It works but need explication */
+        margin-right: 0em;
         visibility: visible;
       }
       .check__ico {
