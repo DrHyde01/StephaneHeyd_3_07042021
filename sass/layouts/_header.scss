@@ -7,7 +7,13 @@
     height: 100px;
     justify-content: space-between;
     flex-wrap: nowrap;
-    padding: $padding-xl; 
+    padding: $padding-xl;
+  }
+  @include hd-screen-only {
+    height: 100px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: $padding-xl;
   }
   &__logo {
     width: 50%;
@@ -18,9 +24,11 @@
     @include desktop-only {
       display: none;
     }
+    @include hd-screen-only {
+      display: none;
+    }
   }
   &__logo--desktop {
-    
     height: 80px;
     padding: $padding-base;
     @include mobile-only {
@@ -46,6 +54,13 @@
       width: 30%;
       border-radius: 30px;
       background-color: $soft-grey;
+      box-shadow: inset 0px 4px 8px -8px;
+    }
+    @include hd-screen-only {
+      width: 30%;
+      border-radius: 30px;
+      background-color: $soft-grey;
+      box-shadow: inset 0px 4px 8px -8px;
     }
   }
 }

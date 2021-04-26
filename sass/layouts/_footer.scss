@@ -1,14 +1,26 @@
 .footer {
-    background-color: darken($soft-grey, 70%);
-    padding: $padding-base;
-    color: $soft-grey;
-    &__title {
-        margin: $margin-none;
-    }
-    &__list {
-        padding-left: $padding-none;
-    }
-    &__item {
-        margin-top: $margin-sm;
-    }
+  background-color: darken($soft-grey, 70%);
+  padding: $padding-base;
+  color: $soft-grey;
+  @include desktop-only {
+    padding-left: $padding-xl;
+    paddinf-right: $padding-xl;
+  }
+  @include hd-screen-only {
+    padding-left: $padding-xxl;
+    padding-right: $padding-xxl;
+  }
+  @include tablet-only {
+    padding-left: $padding-xxl;
+    padding-right: $padding-xxl;
+  }
+  &__title {
+    margin: $margin-none;
+  }
+  &__list {
+    padding-left: $padding-none;
+  }
+  &__item {
+    margin-top: $margin-sm;
+  }
 }

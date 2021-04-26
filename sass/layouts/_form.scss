@@ -13,4 +13,15 @@ input {
   font-size: 0.9em;
   font-weight: bold;
   outline: none;
+  @include desktop-only {
+    width: 100%;
+    background-color: $soft-grey;
+  }
+  @include hd-screen-only {
+    width: 100%;
+    background-color: $soft-grey;
+  }
+  @include tablet-only {
+    width: 50%;
+  }
 }

@@ -6,6 +6,15 @@
   justify-content: center;
   align-items: center;
   transition: 600ms ease-in-out; /* make a smooth transition */
+  @include desktop-only {
+    width: 20%;
+  }
+  @include hd-screen-only {
+    width: 20%;
+  }
+  @include tablet-only {
+    width: 40%;
+  }
 
   &:hover {
     @include lighter-hover;

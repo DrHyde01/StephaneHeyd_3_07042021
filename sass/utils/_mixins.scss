@@ -71,3 +71,9 @@
     @content;
   }
 }
+
+@mixin hd-screen-only {
+  @media screen and (min-width: map-get($breakpoints, hd-screen)) {
+    @content;
+  }
+}

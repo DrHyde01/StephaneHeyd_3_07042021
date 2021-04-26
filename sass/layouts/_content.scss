@@ -9,6 +9,14 @@
   @include shadows;
   border-radius: 18px;
   transition: 2s;
+  @include desktop-only {
+    margin-top: $margin-none;
+    margin-bottom: $margin-none;
+  }
+  @include hd-screen-only {
+    margin-top: $margin-none;
+    margin-bottom: $margin-none;
+  }
   .restaurant__img {
     width: 100%;
     height: 65%;
