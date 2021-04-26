@@ -716,6 +716,14 @@ input {
     margin-bottom: -20px;
   }
 }
+@media screen and (min-width: 749px) and (max-width: 1024px) {
+  .menu {
+    padding-left: 100px;
+    padding-right: 100px;
+    top: -20px;
+    margin-bottom: -20px;
+  }
+}
 .menu__header {
   display: flex;
   justify-content: space-around;
@@ -723,6 +731,24 @@ input {
 }
 .menu__restaurant {
   width: 80%;
+}
+@media screen and (min-width: 1024px) and (max-width: 1824px) {
+  .menu__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-gap: 50px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1824px) {
+  .menu__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 500px);
+    grid-gap: 70px;
+    justify-content: center;
+    width: 100%;
+  }
 }
 .menu__order {
   margin-bottom: 15px;

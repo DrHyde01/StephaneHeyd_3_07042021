@@ -31,6 +31,12 @@
     top: -20px;
     margin-bottom: -20px;
   }
+  @include tablet-only {
+    padding-left: $padding-xxl;
+    padding-right: $padding-xxl;
+    top: -20px;
+    margin-bottom: -20px;
+  }
   &__header {
     display: flex;
     justify-content: space-around;
@@ -38,6 +44,22 @@
   }
   &__restaurant {
     width: 80%;
+  }
+  &__grid {
+    @include desktop-only {
+      display: grid;
+      grid-template-columns: repeat(3, 300px);
+      grid-gap: 50px;
+      justify-content: center;
+      width: 100%;
+    }
+    @include hd-screen-only {
+      display: grid;
+      grid-template-columns: repeat(3, 500px);
+      grid-gap: 70px;
+      justify-content: center;
+      width: 100%;
+    }
   }
   &__order {
     margin-bottom: $margin-base;
