@@ -3,9 +3,21 @@
   height: 300px;
   display: flex;
   justify-content: center;
+  @include desktop-only {
+    height: 400px;
+  }
+  @include hd-screen-only {
+    height: 500px;
+  }
   img {
     width: 100%;
     object-fit: cover;
+    @include desktop-only {
+      object-position: 50% 60%;
+    }
+    @include hd-screen-only {
+      object-position: 50% 60%;
+    }
   }
 }
 
@@ -22,20 +34,20 @@
   @include desktop-only {
     padding-left: $padding-xl;
     padding-right: $padding-xl;
-    top: -20px;
-    margin-bottom: -20px;
+    top: -30px;
+    margin-bottom: -30px;
   }
   @include hd-screen-only {
     padding-left: $padding-xxl;
     padding-right: $padding-xxl;
-    top: -20px;
-    margin-bottom: -20px;
+    top: -30px;
+    margin-bottom: -30px;
   }
   @include tablet-only {
     padding-left: $padding-xxl;
     padding-right: $padding-xxl;
-    top: -20px;
-    margin-bottom: -20px;
+    top: -30px;
+    margin-bottom: -30px;
   }
   &__header {
     display: flex;
@@ -69,15 +81,15 @@
   &__grid {
     @include desktop-only {
       display: grid;
-      grid-template-columns: repeat(3, 300px);
-      grid-gap: 50px;
+      grid-template-columns: repeat(3, 310px);
+      grid-gap: 30px;
       justify-content: center;
       width: 100%;
     }
     @include hd-screen-only {
       display: grid;
-      grid-template-columns: repeat(3, 500px);
-      grid-gap: 70px;
+      grid-template-columns: repeat(3, 400px);
+      grid-gap: 40px;
       justify-content: center;
       width: 100%;
     }
