@@ -460,7 +460,7 @@ input {
 }
 @media screen and (min-width: 1824px) {
   .head__search {
-    width: 30%;
+    width: 20%;
     border-radius: 30px;
     background-color: #f7f7f7;
     box-shadow: inset 0px 4px 8px -8px;
@@ -805,7 +805,7 @@ input {
   }
 }
 .menu__order {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   /* Work in progress ... */
   transform: scale(0);
   animation-name: menu_list;
