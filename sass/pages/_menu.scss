@@ -41,9 +41,30 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @include desktop-only {
+      flex-direction: column;
+      align-content: center;
+    }
+    @include hd-screen-only {
+      flex-direction: column;
+      align-content: center;
+    }
+    @include tablet-only {
+      flex-direction: column;
+      align-content: center;
+    }
   }
   &__restaurant {
     width: 80%;
+    @include desktop-only {
+      width: auto;
+    }
+    @include hd-screen-only {
+      width: auto;
+    }
+    @include tablet-only {
+      width: auto;
+    }
   }
   &__grid {
     @include desktop-only {

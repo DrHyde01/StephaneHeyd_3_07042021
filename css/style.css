@@ -290,7 +290,6 @@ a {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 20%;
 }
 
 .favorite__ico {
@@ -729,8 +728,41 @@ input {
   justify-content: space-around;
   align-items: center;
 }
+@media screen and (min-width: 1024px) and (max-width: 1824px) {
+  .menu__header {
+    flex-direction: column;
+    align-content: center;
+  }
+}
+@media screen and (min-width: 1824px) {
+  .menu__header {
+    flex-direction: column;
+    align-content: center;
+  }
+}
+@media screen and (min-width: 749px) and (max-width: 1024px) {
+  .menu__header {
+    flex-direction: column;
+    align-content: center;
+  }
+}
 .menu__restaurant {
   width: 80%;
+}
+@media screen and (min-width: 1024px) and (max-width: 1824px) {
+  .menu__restaurant {
+    width: auto;
+  }
+}
+@media screen and (min-width: 1824px) {
+  .menu__restaurant {
+    width: auto;
+  }
+}
+@media screen and (min-width: 749px) and (max-width: 1024px) {
+  .menu__restaurant {
+    width: auto;
+  }
 }
 @media screen and (min-width: 1024px) and (max-width: 1824px) {
   .menu__grid {
