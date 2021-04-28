@@ -73,7 +73,7 @@ body {
   margin: 0;
 }
 
-/* Pour rendre la mise en page plus fluide */
+/* To make pages more responsive ! */
 body {
   font-family: "roboto", sans-serif;
   font-size: 1em;
@@ -162,7 +162,7 @@ a {
 }
 @media screen and (min-width: 1824px) {
   .btn__gradient {
-    width: 20%;
+    width: 15%;
   }
 }
 @media screen and (min-width: 749px) and (max-width: 1024px) {
@@ -177,6 +177,10 @@ a {
   /* Make button shadow darker on hover */
 }
 
+.head__search__ico {
+  opacity: 0.7;
+}
+
 .operations__number {
   display: flex;
   justify-content: center;
@@ -186,10 +190,6 @@ a {
   color: #ffff;
   background-color: #9356dc;
   border-radius: 50px;
-}
-
-.head__search__ico {
-  opacity: 0.7;
 }
 
 .operations__ico {
@@ -213,7 +213,12 @@ a {
 
 .footer__ico {
   font-size: 1em;
-  padding-right: 5px;
+  padding-right: 1.5em;
+}
+.footer__ico--hands {
+  /* Hands icon is too big */
+  font-size: 0.8em;
+  padding-right: 1.9em;
 }
 
 /* Figures & figcaptions */
@@ -232,12 +237,14 @@ a {
   .restaurant__figure {
     margin-top: 0px;
     margin-bottom: 0px;
+    height: 280px;
   }
 }
 @media screen and (min-width: 1824px) {
   .restaurant__figure {
     margin-top: 0px;
     margin-bottom: 0px;
+    height: 280px;
   }
 }
 .restaurant__figure .restaurant__img {
@@ -279,6 +286,17 @@ a {
   width: 80%;
   margin: 0;
 }
+@media screen and (min-width: 1024px) and (max-width: 1824px) {
+  .restaurant__figure .restaurant__figcaption .restaurant__name {
+    padding-top: 10px;
+    /* Center the title */
+  }
+}
+@media screen and (min-width: 1824px) {
+  .restaurant__figure .restaurant__figcaption .restaurant__name {
+    padding-top: 10px;
+  }
+}
 .restaurant__figure .restaurant__figcaption .restaurant__location {
   width: 80%;
   margin-top: 5px;
@@ -311,6 +329,7 @@ a {
 
 .favorite__ico--color {
   background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* Need border like previous state, try to use stroke property ? */
@@ -324,7 +343,7 @@ a {
 @media screen and (min-width: 1024px) and (max-width: 1824px) {
   .footer {
     padding-left: 50px;
-    paddinf-right: 50px;
+    padding-right: 50px;
   }
 }
 @media screen and (min-width: 1824px) {
@@ -579,7 +598,7 @@ input {
 @media screen and (min-width: 1824px) {
   .operations__content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1824px) {
@@ -589,7 +608,7 @@ input {
 }
 @media screen and (min-width: 1824px) {
   .operations__item {
-    width: 30%;
+    width: 20%;
   }
 }
 .operations__btn {
@@ -655,7 +674,7 @@ input {
     grid-template-columns: repeat(2, 600px);
     /*Fixed width for extrems resolutions */
     justify-content: center;
-    grid-gap: 40px;
+    grid-gap: 60px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1824px) {
@@ -790,7 +809,7 @@ input {
   .menu__grid {
     display: grid;
     grid-template-columns: repeat(3, 310px);
-    grid-gap: 30px;
+    grid-gap: 40px;
     justify-content: center;
     width: 100%;
   }
@@ -799,14 +818,13 @@ input {
   .menu__grid {
     display: grid;
     grid-template-columns: repeat(3, 400px);
-    grid-gap: 40px;
+    grid-gap: 80px;
     justify-content: center;
     width: 100%;
   }
 }
 .menu__order {
   margin-bottom: 30px;
-  /* Work in progress ... */
   transform: scale(0);
   animation-name: menu_list;
   animation-duration: 1000ms;
@@ -894,9 +912,7 @@ input {
   text-overflow: ellipsis;
 }
 .menu__description {
-  /* Create ellipsis on the 2nd text */
   display: block;
-  /* Not working with flex ! */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -909,7 +925,6 @@ input {
   padding-bottom: 10px;
 }
 .menu__check {
-  /* Work in progress ... */
   height: 100%;
   background-color: #99e2d0;
   width: 4em;
@@ -922,7 +937,6 @@ input {
   transition-duration: 1500ms;
 }
 .menu .check__ico {
-  /* Work in progress ... */
   animation-name: check_out;
   animation-duration: 1500ms;
 }

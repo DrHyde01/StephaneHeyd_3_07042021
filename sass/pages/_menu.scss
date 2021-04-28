@@ -82,21 +82,20 @@
     @include desktop-only {
       display: grid;
       grid-template-columns: repeat(3, 310px);
-      grid-gap: 30px;
+      grid-gap: 40px;
       justify-content: center;
       width: 100%;
     }
     @include hd-screen-only {
       display: grid;
       grid-template-columns: repeat(3, 400px);
-      grid-gap: 40px;
+      grid-gap: 80px;
       justify-content: center;
       width: 100%;
     }
   }
   &__order {
     margin-bottom: $margin-lg;
-    /* Work in progress ... */
     transform: scale(0);
     animation-name: menu_list;
     animation-duration: $anim-dur;
@@ -167,8 +166,7 @@
     text-overflow: ellipsis;
   }
   &__description {
-    /* Create ellipsis on the 2nd text */
-    display: block; /* Not working with flex ! */
+    display: block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -181,7 +179,6 @@
     padding-bottom: 10px;
   }
   &__check {
-    /* Work in progress ... */
     height: 100%;
     background-color: $mint;
     width: 4em;
@@ -194,7 +191,6 @@
     transition-duration: 1500ms;
   }
   .check__ico {
-    /* Work in progress ... */
     animation-name: check_out;
     animation-duration: 1500ms;
   }

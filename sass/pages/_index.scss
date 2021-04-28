@@ -89,7 +89,7 @@
     }
     @include hd-screen-only {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
     }
   }
   &__item {
@@ -97,7 +97,7 @@
       width: 30%;
     }
     @include hd-screen-only {
-      width: 30%;
+      width: 20%;
     }
   }
   &__btn {
@@ -153,7 +153,7 @@
         600px
       ); /*Fixed width for extrems resolutions */
       justify-content: center;
-      grid-gap: 40px;
+      grid-gap: 60px;
     }
   }
   @include desktop-only {

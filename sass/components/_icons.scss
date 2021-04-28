@@ -1,3 +1,7 @@
+.head__search__ico {
+  opacity: 0.7;
+}
+
 .operations__number {
   display: flex;
   justify-content: center;
@@ -7,10 +11,6 @@
   color: $white;
   background-color: $purple;
   border-radius: 50px;
-}
-
-.head__search__ico {
-  opacity: 0.7;
 }
 
 .operations__ico {
@@ -34,5 +34,10 @@
 
 .footer__ico {
   font-size: 1em;
-  padding-right: $padding-sm;
+  padding-right: 1.5em;
+  &--hands {
+    /* Hands icon is too big */
+    font-size: 0.8em;
+    padding-right: 1.9em;
+  }
 }

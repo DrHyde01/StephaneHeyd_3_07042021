@@ -12,10 +12,12 @@
   @include desktop-only {
     margin-top: $margin-none;
     margin-bottom: $margin-none;
+    height: 280px;
   }
   @include hd-screen-only {
     margin-top: $margin-none;
     margin-bottom: $margin-none;
+    height: 280px;
   }
   .restaurant__img {
     width: 100%;
@@ -47,6 +49,12 @@
     .restaurant__name {
       width: 80%;
       margin: 0;
+      @include desktop-only {
+        padding-top: 10px; /* Center the title */
+      }
+      @include hd-screen-only {
+        padding-top: 10px;
+      }
     }
 
     .restaurant__location {
@@ -80,6 +88,7 @@
 }
 .favorite__ico--color {
   background: $gradient;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* Need border like previous state, try to use stroke property ? */

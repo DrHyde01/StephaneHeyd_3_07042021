@@ -4,7 +4,7 @@
   color: $soft-grey;
   @include desktop-only {
     padding-left: $padding-xl;
-    paddinf-right: $padding-xl;
+    padding-right: $padding-xl;
   }
   @include hd-screen-only {
     padding-left: $padding-xxl;
