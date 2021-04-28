@@ -88,7 +88,6 @@
 }
 .favorite__ico--color {
   background: $gradient;
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* Need border like previous state, try to use stroke property ? */
