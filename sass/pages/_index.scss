@@ -143,17 +143,19 @@
   &__content {
     @include desktop-only {
       display: grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: repeat(2, auto);
       grid-gap: 40px;
+      padding-top: $padding-base;
     }
     @include hd-screen-only {
       display: grid;
       grid-template-columns: repeat(
         2,
-        600px
+        780px
       ); /*Fixed width for extrems resolutions */
       justify-content: center;
-      grid-gap: 60px;
+      grid-gap: 50px;
+      padding-top: $padding-base;
     }
   }
   @include desktop-only {
