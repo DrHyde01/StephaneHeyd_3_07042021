@@ -856,15 +856,15 @@ input {
   /* SASS loop here, to menus appears in order */
 }
 .menu__order--1 {
-  animation-delay: 0.3333333333s;
+  animation-delay: 333.3333333333ms;
   /* Divide animation delay */
 }
 .menu__order--2 {
-  animation-delay: 0.6666666667s;
+  animation-delay: 666.6666666667ms;
   /* Divide animation delay */
 }
 .menu__order--3 {
-  animation-delay: 1s;
+  animation-delay: 1000ms;
   /* Divide animation delay */
 }
 .menu__ordertitle {

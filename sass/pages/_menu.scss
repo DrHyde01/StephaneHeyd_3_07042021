@@ -101,10 +101,10 @@
     animation-duration: $anim-dur;
     animation-timing-function: cubic-bezier(0.38, 0.1, 0.67, 0.99);
     animation-fill-mode: both; /* Scale 1 at animation end */
-    @for $i from 1 through 3 {
+    @for $i from 1 through $num-menus {
       /* SASS loop here, to menus appears in order */
       &--#{$i} {
-        animation-delay: #{$i/3}s; /* Divide animation delay */
+        animation-delay: $anim-delay * $i; /* Divide animation delay */
       }
     }
   }
