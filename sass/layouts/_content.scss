@@ -8,7 +8,7 @@
   height: 230px;
   @include shadows;
   border-radius: 18px;
-  transition: 2s;
+  transition: 1000ms ease-in-out;
   @include desktop-only {
     margin-top: $margin-none;
     margin-bottom: $margin-none;
@@ -91,7 +91,7 @@
 .favorite__ico {
   position: absolute;
   background-color: $white;
-  transition: opacity 600ms ease-in-out;
+  transition: opacity 1000ms ease-in-out;
   &--grey {
     background-color: $soft-grey; /* A little adjustemnt for the menu page background color */
   }

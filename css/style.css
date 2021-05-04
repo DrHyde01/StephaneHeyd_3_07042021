@@ -233,7 +233,7 @@ a {
   height: 230px;
   box-shadow: 2px 4px 15px #dedede;
   border-radius: 18px;
-  transition: 2s;
+  transition: 1000ms ease-in-out;
 }
 @media screen and (min-width: 1024px) and (max-width: 1824px) {
   .restaurant__figure {
@@ -336,7 +336,7 @@ a {
 .favorite__ico {
   position: absolute;
   background-color: #ffff;
-  transition: opacity 600ms ease-in-out;
+  transition: opacity 1000ms ease-in-out;
 }
 .favorite__ico--grey {
   background-color: #f7f7f7;
@@ -648,7 +648,7 @@ input {
   background-color: #f7f7f7;
   border-radius: 18px;
   box-shadow: 2px 4px 15px #dedede;
-  transition: 500ms;
+  transition: 600ms ease-in-out;
   /* Smooth animation */
 }
 .operations__btn:hover {
@@ -905,7 +905,8 @@ input {
   overflow: hidden;
   /* To hide outside elements, like check item */
   box-shadow: 2px 4px 15px #dedede;
-  transition: 500ms;
+  transition: 600ms ease-in-out;
+  /* For hover proprieties */
 }
 .menu__btn:hover {
   opacity: 0.8;

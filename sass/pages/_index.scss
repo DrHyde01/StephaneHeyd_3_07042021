@@ -114,7 +114,7 @@
     background-color: $soft-grey;
     border-radius: 18px;
     @include shadows;
-    transition: 500ms; /* Smooth animation */
+    transition: 600ms ease-in-out; /* Smooth animation */
 
     &:hover {
       @include lighter-hover;

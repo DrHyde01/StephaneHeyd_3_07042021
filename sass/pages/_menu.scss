@@ -133,7 +133,7 @@
     border-radius: 18px;
     overflow: hidden; /* To hide outside elements, like check item */
     @include shadows;
-    transition: 500ms;
+    transition: 600ms ease-in-out; /* For hover proprieties */
     &:hover {
       @include lighter-hover;
       cursor: pointer;
