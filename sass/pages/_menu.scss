@@ -100,11 +100,11 @@
     animation-name: menu_list;
     animation-duration: $anim-dur;
     animation-timing-function: cubic-bezier(0.38, 0.1, 0.67, 0.99);
-    animation-fill-mode: both; /* Scale 1 at animation end */
+    animation-fill-mode: both; /* Scale 1 at animation end, no return to initial value */
     @for $i from 1 through $num-menus {
       /* SASS loop here, to menus appears in order */
-      &--#{$i} {
-        animation-delay: $anim-delay * $i; /* Divide animation delay */
+      &--#{$i} { /* $i for Interator */
+        animation-delay: $anim-delay * $i; /* Result : animation-duration + delay, 2000ms to display menu */
       }
     }
   }
@@ -112,7 +112,7 @@
     position: relative; /* IMPORTANT ! */
     padding-bottom: $padding-sm; /* Space between text and underline */
     /* To create the mint green underline */
-    &::after {
+    &::after { /* To create underline in the same div, after the text */
       content: ""; /* Don't forget the content property :) */
       width: 2rem;
       height: 0.25rem;
@@ -190,7 +190,7 @@
     visibility: hidden;
     transition-duration: 1500ms;
   }
-  .check__ico {
+  .check__ico { /* After the hover */
     animation-name: check_out;
     animation-duration: 1500ms;
   }

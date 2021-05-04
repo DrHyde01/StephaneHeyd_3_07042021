@@ -34,5 +34,5 @@ $breakpoints: (
 
 /* MENU LOAD */
 $anim-dur: 1000ms;
-$num-menus: 3;
-$anim-delay: $anim-dur / $num-menus;
+$num-menus: 3; /* For SASS loop */
+$anim-delay: $anim-dur / $num-menus; /* For SASS loop */

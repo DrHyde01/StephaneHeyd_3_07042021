@@ -3,6 +3,8 @@
 /* MARGINS & PADDINGS */
 /* MEDIAS QUERIES */
 /* MENU LOAD */
+/* For SASS loop */
+/* For SASS loop */
 /* Disable styles for links or lists */
 /* Buttons style using gradient background */
 /* Shadow for main containers and buttons */
@@ -505,6 +507,7 @@ input {
 }
 
 .loader {
+  /* BLOCK */
   position: fixed;
   /*fixed on the whole page */
   height: 100%;
@@ -520,6 +523,7 @@ input {
   animation-fill-mode: both;
 }
 .loader__assiette {
+  /* ELEMENT */
   position: relative;
   height: 200px;
   width: 200px;
@@ -529,6 +533,7 @@ input {
   animation-iteration-count: 1;
 }
 .loader__assiette--dot {
+  /* MODIFICATOR */
   height: 20px;
   width: 20px;
   background-color: #99e2d0;
@@ -850,22 +855,25 @@ input {
   animation-duration: 1000ms;
   animation-timing-function: cubic-bezier(0.38, 0.1, 0.67, 0.99);
   animation-fill-mode: both;
-  /* Scale 1 at animation end */
+  /* Scale 1 at animation end, no return to initial value */
   /* SASS loop here, to menus appears in order */
   /* SASS loop here, to menus appears in order */
   /* SASS loop here, to menus appears in order */
 }
 .menu__order--1 {
+  /* $i for Interator */
   animation-delay: 333.3333333333ms;
-  /* Divide animation delay */
+  /* Result : animation-duration + delay, 2000ms to display menu */
 }
 .menu__order--2 {
+  /* $i for Interator */
   animation-delay: 666.6666666667ms;
-  /* Divide animation delay */
+  /* Result : animation-duration + delay, 2000ms to display menu */
 }
 .menu__order--3 {
+  /* $i for Interator */
   animation-delay: 1000ms;
-  /* Divide animation delay */
+  /* Result : animation-duration + delay, 2000ms to display menu */
 }
 .menu__ordertitle {
   position: relative;
@@ -875,6 +883,7 @@ input {
   /* To create the mint green underline */
 }
 .menu__ordertitle::after {
+  /* To create underline in the same div, after the text */
   content: "";
   /* Don't forget the content property :) */
   width: 2rem;
@@ -957,6 +966,7 @@ input {
   transition-duration: 1500ms;
 }
 .menu .check__ico {
+  /* After the hover */
   animation-name: check_out;
   animation-duration: 1500ms;
 }
