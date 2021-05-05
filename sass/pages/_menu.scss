@@ -103,7 +103,7 @@
     animation-fill-mode: both; /* Scale 1 at animation end, no return to initial value */
     @for $i from 1 through $num-menus {
       /* SASS loop here, to menus appears in order */
-      &--#{$i} { /* $i for Interator */
+      &--#{$i} { /* $i for Iterator */
         animation-delay: $anim-delay * $i; /* Result : animation-duration + delay, 2000ms to display menu */
       }
     }

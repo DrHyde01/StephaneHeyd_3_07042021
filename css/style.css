@@ -861,17 +861,17 @@ input {
   /* SASS loop here, to menus appears in order */
 }
 .menu__order--1 {
-  /* $i for Interator */
+  /* $i for Iterator */
   animation-delay: 333.3333333333ms;
   /* Result : animation-duration + delay, 2000ms to display menu */
 }
 .menu__order--2 {
-  /* $i for Interator */
+  /* $i for Iterator */
   animation-delay: 666.6666666667ms;
   /* Result : animation-duration + delay, 2000ms to display menu */
 }
 .menu__order--3 {
-  /* $i for Interator */
+  /* $i for Iterator */
   animation-delay: 1000ms;
   /* Result : animation-duration + delay, 2000ms to display menu */
 }
